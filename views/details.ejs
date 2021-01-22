@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('head',{}); %>
-    <title>Document</title>
+        <title>Document</title>
 </head>
+
 <body>
-    这里是详情页
+    <div class="layui-container">
+        <div class="layui-row">
+            <ul class="layui-nav">
+                <li class="layui-nav-item">
+                    <a href="">写文章</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">退出</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div>
+            <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
