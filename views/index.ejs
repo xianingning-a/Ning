@@ -2,11 +2,13 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <%- include('head',{}); %>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <h1>ok</h1>
+    <button type="button" class="layui-btn">一个标准的按钮</button>
+<a href="http://www.layui.com" class="layui-btn">一个可跳转的按钮</a>
   </body>
 </html>
