@@ -3,26 +3,35 @@
 <head>
     <%- include('head',{}); %>
     <title>Document</title>
+    <style>
+        .layui-01{
+            margin-top: 20px
+        }
+        .layui-02{
+            margin-top: 20px;
+        }
+        .layui-btn{
+            background-color: #1E9FFF;
+        }
+        .layui-btn-container{
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <%- include('header',{}); %>
     <div class="layui-container">
         <div class="layui-row">
-            <ul class="layui-nav">
-                <li class="layui-nav-item">
-                    <a href="">写文章</a>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="">退出</a>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="">
-                        <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>
-                    </a>
-                </li>
-            </ul>
-            <div>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入文章标题" autocomplete="off" class="layui-input">
+            
+            <div class="layui-01">
+                <input type="text" name="title" required placeholder="请输入文章标题" class="layui-input">
             </div>
+            <div class="layui-02">
+                <textarea name="" required placeholder="请输入内容" class="layui-textarea"></textarea>
+              </div>
+              <div class="layui-btn-container">
+                <button type="button" class="layui-btn">提交</button>
+                </div>
         </div>
     </div>
 </body>

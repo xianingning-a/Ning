@@ -3,6 +3,21 @@
 <head>
     <%- include('head',{}); %>
     <title>Document</title>
+    <style>
+        .layui-input{
+            width: 50%;
+        }
+        .layui-btn-fluid{
+            width: 50%;
+            background-color: #1E9FFF;
+        }
+        .layui-form-item{
+            margin-left: 25%;
+        }
+        .zhuce{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="layui-container">
@@ -31,6 +46,9 @@
                         <!-- <button class="layui-btn" type="button" lay-submit lay-filter="formDemo" class="layui-btn layui-btn-fluid">立即提交</button> -->
                         <button type="button" class="layui-btn layui-btn-fluid">注册</button>
                     </div>
+                </div>
+                <div class="zhuce">
+                    已有账号，<a href="/login" style="color: #1E9FFF;">立即登录</a>
                 </div>
             </form>
         </div>

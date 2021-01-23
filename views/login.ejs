@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-
-
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/libs/layui/css/layui.css"> -->
-        <%- include('head',{}); %>
-
-
+    <%- include('head',{}); %>
     <title>Document</title>
+    <style>
+        .layui-input{
+            width: 50%;
+        }
+        .layui-btn-fluid{
+            width: 50%;
+            background-color: #1E9FFF;
+        }
+        .layui-form-item{
+            margin-left: 25%;
+        }
+        .zhuce{
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
     <div class="layui-container">
         <div class="layui-row">
@@ -33,18 +41,14 @@
                 </div>
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <!-- <button class="layui-btn" type="button" lay-submit lay-filter="formDemo" class="layui-btn layui-btn-fluid">立即提交</button> -->
                         <button type="button" class="layui-btn layui-btn-fluid">立即提交</button>
                     </div>
                 </div>
-                <!-- <div>
-                    没有账号，<a href="#">立即注册</a>
-                </div> -->
+                <div class="zhuce">
+                    没有账号，<a href="/registered" style="color: #1E9FFF;">立即注册</a>
+                </div>
             </form>
-            
-            
         </div>
     </div>
 </body>
-
 </html>

@@ -7,27 +7,27 @@
 </head>
 
 <body>
+    <%- include('header',{}); %>
     <div class="layui-container">
         <div class="layui-row">
-            <ul class="layui-nav">
-                <li class="layui-nav-item">
-                    <a href="">写文章</a>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="">退出</a>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="">
-                        <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>
-                    </a>
-                </li>
-            </ul>
-
-            <div>
-            <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+            <div class="layui-card"></div>
+            <div class="layui-card">
+                <div
+                 class="layui-card-header"
+                 style="font-size: large;font-weight: bold;">
+                 最新资讯
+                </div>
+                <div class="layui-card-body" style="font-size: small;">
+                  作者：Ning 发布时间：2021-01-22 16:30:00
+                </div>
+                <div class="layui-card-body">
+                  秃头少女是头秃女孩
+                </div>
             </div>
+
         </div>
     </div>
+
 </body>
 
 </html>
