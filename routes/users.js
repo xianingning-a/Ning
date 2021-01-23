@@ -28,6 +28,16 @@ router.post('/addUser',(req,res,next)=>{
     password:req.body.password,
     passwordC:req.body.passwordC
   }
+
+  //用户验证
+  if (userInfo.password !== userInfo.passwordC) {
+    let error = {
+      state:0,//错误编码
+      stack:''//错误代码
+    }
+    res.render('error',{error,message:'密码不一致'})
+  }
+
   //页面保单数据，放入模型
   let userI = new User(userInfo)
 
