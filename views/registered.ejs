@@ -22,29 +22,29 @@
 <body>
     <div class="layui-container">
         <div class="layui-row">
-            <form class="layui-form" action="">
+            <form class="layui-form" action="/users/addUser" method="POST">
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户名</label>
                     <div class="layui-input-block">
-                        <input type="text" name="title" required placeholder="请输入用户名" class="layui-input">
+                        <input type="text" name="userName" required placeholder="请输入用户名" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">密码</label>
                     <div class="layui-input-block">
-                        <input type="password" name="title" required placeholder="请输入密码" class="layui-input">
+                        <input type="password" name="password" required placeholder="请输入密码" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">密码</label>
                     <div class="layui-input-block">
-                        <input type="password" name="title" required placeholder="请再次输入密码" class="layui-input">
+                        <input type="password" name="passwordC" required placeholder="请再次输入密码" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <div class="layui-input-block">
                         <!-- <button class="layui-btn" type="button" lay-submit lay-filter="formDemo" class="layui-btn layui-btn-fluid">立即提交</button> -->
-                        <button type="button" class="layui-btn layui-btn-fluid">注册</button>
+                        <button type="submit" class="layui-btn layui-btn-fluid">注册</button>
                     </div>
                 </div>
                 <div class="zhuce">
