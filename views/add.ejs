@@ -19,19 +19,20 @@
     </style>
 </head>
 <body>
-    <%- include('header',{}); %>
+    <%- include('header',{userName}); %>
     <div class="layui-container">
         <div class="layui-row">
-            
+            <form action="/article/cdd" method="POST">
             <div class="layui-01">
-                <input type="text" name="title" required placeholder="请输入文章标题" class="layui-input">
+                <input type="text" name="titletxt" required placeholder="请输入文章标题" class="layui-input" value="abcd">
             </div>
             <div class="layui-02">
-                <textarea name="" required placeholder="请输入内容" class="layui-textarea"></textarea>
+                <textarea name="content" required placeholder="请输入内容" class="layui-textarea">hahahaahha</textarea>
               </div>
               <div class="layui-btn-container">
-                <button type="button" class="layui-btn">提交</button>
+                <button type="submit" class="layui-btn">提交</button>
                 </div>
+            </form>
         </div>
     </div>
 </body>

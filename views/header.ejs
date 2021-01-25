@@ -7,8 +7,15 @@
           <a href="">退出</a>
         </li>
         <li class="layui-nav-item">
-          <a href="">
-            <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i> 
+          <% if(userName) { %>
+            <p style="color: white;line-height: 40px;font-size: 20px;">
+              <%= userName %>
+            </p>
+            <% } else { %>
+          <a href="/login">
+            <!-- <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>   -->
+            登录
           </a>
+          <% } %>
         </li>
       </ul>
