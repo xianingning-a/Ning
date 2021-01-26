@@ -24,16 +24,29 @@
         <div class="layui-row">
             <form action="/article/cdd" method="POST">
             <div class="layui-01">
-                <input type="text" name="titletxt" required placeholder="请输入文章标题" class="layui-input" value="abcd">
+                <input type="text" name="titletxt" placeholder="请输入文章标题" class="layui-input">
             </div>
             <div class="layui-02">
-                <textarea name="content" required placeholder="请输入内容" class="layui-textarea">hahahaahha</textarea>
+                <textarea name="content" placeholder="请输入内容" class="layui-textarea" id="editor"></textarea>
               </div>
               <div class="layui-btn-container">
-                <button type="submit" class="layui-btn">提交</button>
+                <button type="submit" class="layui-btn">发布</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="/libs/ckeditor5-build-classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ), {
+                ckfinder: {
+                    uploadUrl: '/article/upload'
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    </script>
 </body>
 </html>
