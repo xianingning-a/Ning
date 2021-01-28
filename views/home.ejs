@@ -23,26 +23,31 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <% data.blogList.map(item=>{ %>
                     <tr>
-                        <td>贤心</td>
-                        <td>2016-11-29</td>
-                        <td>人生就像是一场修行</td>
+                        <td><a href="/details?_id=<%= item._id %>"><%= item.titletxt %></a></td>
+                        <td><a href="/details"><%= item.time %></a></td>
+                        <td><a href="/details"><%- item.content %></a></td>
                         <td>
-                            <a href="#">删除</a>
-                            <a href="#">编辑</a>
+                            <a href="/add?_id=<%= item._id %>&page=<%= data.currPage %>">
+                                <i class="layui-icon layui-icon-edit" style="font-size: 25px;"></i>  
+                            </a>
+                            <a href="/article/delete?_id=<%= item._id %>&page=<%= data.currPage %>">
+                                <i class="layui-icon layui-icon-delete" style="font-size: 25px;"></i>
+                            </a>
                         </td> 
                     </tr>
-                    <tr>
-                        <td>许闲心</td>
-                        <td>2016-11-28</td>
-                        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-                        <td>
-                            <a href="#">删除</a>
-                            <a href="#">编辑</a>
-                        </td>
-                    </tr>
+                    <% })%>
+                   
                 </tbody>
             </table>
+            <div>
+                <% for(let i = 1;i <=data.PagesTotle;i++){ %>
+                    <a href="/home?page=<%=i%>" class="<%- data.currPage==i?'active':'' %>">
+                        <%= i %>
+                    </a>
+                    <% } %>
+            </div>
         </div>
     </div>
 </body>

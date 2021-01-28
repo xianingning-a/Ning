@@ -23,14 +23,22 @@
     <div class="layui-container">
         <div class="layui-row">
             <form action="/article/cdd" method="POST">
+                <input type="hidden" name="dId" value="<%=dataa._id%>">
+                <input type="hidden" name="page" value="<%=dataa.page%>">
             <div class="layui-01">
-                <input type="text" name="titletxt" placeholder="请输入文章标题" class="layui-input">
+                <input type="text" name="titletxt" value="<%= dataa.titletxt%>" placeholder="请输入文章标题" class="layui-input">
             </div>
             <div class="layui-02">
-                <textarea name="content" placeholder="请输入内容" class="layui-textarea" id="editor"></textarea>
+                <textarea name="content" placeholder="请输入内容" class="layui-textarea" id="editor">
+                    <%- dataa.content %>
+                </textarea>
               </div>
               <div class="layui-btn-container">
+                  <%if(!dataa._id){%>
                 <button type="submit" class="layui-btn">发布</button>
+                <%}else{%>
+                <button type="submit" class="layui-btn">确认修改</button>
+                <%}%>
                 </div>
             </form>
         </div>

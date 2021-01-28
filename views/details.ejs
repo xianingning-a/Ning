@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <%- include('header',{}); %>
+    <%- include('header',{userName}); %>
     <div class="layui-container">
         <div class="layui-row">
             <div class="layui-card"></div>
@@ -15,13 +15,13 @@
                 <div
                  class="layui-card-header"
                  style="font-size: large;font-weight: bold;">
-                 最新资讯
+                 <%= data.titletxt %>
                 </div>
                 <div class="layui-card-body" style="font-size: small;">
-                  作者：Ning 发布时间：2021-01-22 16:30:00
+                    <%= data.time %>
                 </div>
                 <div class="layui-card-body">
-                  秃头少女是头秃女孩
+                    <%- data.content %>
                 </div>
             </div>
 
